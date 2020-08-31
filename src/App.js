@@ -24,7 +24,17 @@ class App extends React.Component {
     super();
     this.state = {
       list: dummyData,
+      inputTask: ""
     }
+  }
+
+  handleChange = (evt) => {
+    this.setState({ inputTask: evt.target.value })
+  }
+
+  handleSubmit = (evt) => {
+      evt.preventDefault();
+      this.addTask(this.state.inputTask);
   }
 
   addTask = (taskName) => {
@@ -44,7 +54,7 @@ class App extends React.Component {
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
-        <TodoForm  addTask={this.addTask}/>
+        <TodoForm  handleChange={this.handleChange} handleSubmit={this.handleSubmit} addTask={this.addTask}/>
         <TodoList list={this.state.list}/> 
 
       </div>
