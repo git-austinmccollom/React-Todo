@@ -79,8 +79,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <h2>Welcome to your Todo App!</h2>
+      <div className={"page-wrapper"}>
+        <h2>Tasks</h2>
         <TodoForm  handleChange={this.handleChange} handleSubmit={this.handleSubmit} addTask={this.addTask} clear={this.clear}/>
         <TodoList list={this.state.list} toggleComplete={this.toggleComplete} /> 
 

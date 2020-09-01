@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './TodoForm.css'
 
 class TodoForm extends Component {
     constructor() {
@@ -20,12 +21,14 @@ class TodoForm extends Component {
                 <input
                     type="submit"
                     name="submitButton"
-                    value="add task"
+                    value="Add Task"
+                    className={"button"}
                 />
                 <input
                     type="button"
                     name="clear"
                     value="Clear Complete"
+                    className={"button"}
                     onClick={this.props.clear}
                 />
             </form>
