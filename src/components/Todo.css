@@ -1,0 +1,9 @@
+.complete {
+    text-decoration-line: line-through;
+}
+
+li {
+    padding: 5%;
+    margin: 5% 0;
+    background-color: #E64944;
+}
