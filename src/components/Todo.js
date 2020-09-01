@@ -1,4 +1,5 @@
 import React from 'react'
+import './Todo.css'
 
 class Todo extends React.Component {
     constructor() {
@@ -9,7 +10,12 @@ class Todo extends React.Component {
 
     render() { 
         return ( 
-            <p>{`${this.props.task}`}</p>
+            <p
+                className={this.props.todo.completed ? "complete" : null}
+                onClick={ () => this.props.toggleComplete(this.props.todo.id) }
+            >
+                {`${this.props.todo.task} and key is ${this.props.todo.id}`}
+            </p>
          );
     }
 }
