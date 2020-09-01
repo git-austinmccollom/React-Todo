@@ -14,7 +14,7 @@ class Todo extends React.Component {
                 className={this.props.todo.completed ? "complete" : null}
                 onClick={ () => this.props.toggleComplete(this.props.todo.id) }
             >
-                {`${this.props.todo.task} and key is ${this.props.todo.id}`}
+                {`${this.props.todo.task}`}
             </p>
          );
     }

@@ -22,6 +22,12 @@ class TodoForm extends Component {
                     name="submitButton"
                     value="add task"
                 />
+                <input
+                    type="button"
+                    name="clear"
+                    value="Clear Complete"
+                    onClick={this.props.clear}
+                />
             </form>
          );
     }

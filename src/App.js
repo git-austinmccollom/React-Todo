@@ -68,11 +68,20 @@ class App extends React.Component {
     })
   }
 
+  clear = () => {
+    console.log('cleaned')
+    this.setState({
+      list: this.state.list.filter( (task) => {
+        return task.completed !== true;
+      })
+    })
+  }
+
   render() {
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
-        <TodoForm  handleChange={this.handleChange} handleSubmit={this.handleSubmit} addTask={this.addTask}/>
+        <TodoForm  handleChange={this.handleChange} handleSubmit={this.handleSubmit} addTask={this.addTask} clear={this.clear}/>
         <TodoList list={this.state.list} toggleComplete={this.toggleComplete} /> 
 
       </div>
