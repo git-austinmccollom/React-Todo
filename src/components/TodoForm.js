@@ -4,7 +4,7 @@ import './TodoForm.css'
 class TodoForm extends Component {
     constructor() {
         super();
-        this.state = { 
+        this.state = {
         }
     }
 
