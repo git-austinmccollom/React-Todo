@@ -47,7 +47,8 @@ class App extends React.Component {
       list: [
         ...this.state.list,
         newTask
-      ]
+      ],
+      inputTask: ''
     });
   }
 
@@ -81,7 +82,7 @@ class App extends React.Component {
     return (
       <div className={"page-wrapper"}>
         <h2>Tasks</h2>
-        <TodoForm  handleChange={this.handleChange} handleSubmit={this.handleSubmit} addTask={this.addTask} clear={this.clear}/>
+        <TodoForm inputTask={this.state.inputTask} handleChange={this.handleChange} handleSubmit={this.handleSubmit} addTask={this.addTask} clear={this.clear}/>
         <TodoList list={this.state.list} toggleComplete={this.toggleComplete} /> 
 
       </div>
