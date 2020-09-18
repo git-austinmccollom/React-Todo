@@ -47,7 +47,8 @@ class App extends React.Component {
       list: [
         ...this.state.list,
         newTask
-      ]
+      ],
+      inputTask: ''
     });
   }
 
